@@ -31,8 +31,25 @@ class Node{
                 }
                 cin>>dta;
             }
-            return length;
-            
+            return length;            
+        }
+        int get_find(int index)
+        {
+            Node *temp=head;
+            if(temp!=NULL)
+            {
+                for(int i=0;i<=index;i++)
+                {
+                    if(i==index)
+                    {
+                        return temp->a;
+                    }
+                    temp=temp->next;
+                }
+            }
+            else
+                cout<<"\nNo LinkedList..";
+                return 0;
         }
 
 };
