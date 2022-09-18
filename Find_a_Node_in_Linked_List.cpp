@@ -1,7 +1,8 @@
 #include<iostream>
 #include "Node1.cpp"
 using namespace std;
-
+//Find Function Is Not Work Properly.
+//A New File Is In Repo Name Is- Find_Node_S_LL.cpp Please Check That File And Sorry For Mistake.
 int find(int pos,Node1 *head)
 {
     if(head==NULL)
