@@ -4,16 +4,16 @@ using namespace std;
 
 Node1* Delete(int pos,Node1 *head)
 {
-    if(head==NULL)
+    if(head==NULL && pos!=0)
     {
+        cout<<"No Pos"<<endl;
         return head;
     }
     if(pos==0)
     {
         Node1 *ptr=head->next;
         delete head;
-        head=ptr;
-        return head;
+        return ptr;
     }
     Node1 *p=Delete(pos-1,head->next);
     head->next=p;
