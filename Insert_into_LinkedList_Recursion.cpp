@@ -4,12 +4,12 @@ using namespace std;
 
 Node1* insert(int pos,int data,Node1 *head)
 {
-    if(head==NULL)
+    if(head==NULL && pos!=0)
     {
-        cout<<"Loc";
+        cout<<"Loc"<<endl;
         return head;
     }
-    if(pos==0)
+    if(pos==1)
     {
         Node1 *ptr=new Node1(data);
         ptr->next=head;
