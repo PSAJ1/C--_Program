@@ -48,8 +48,8 @@ class Node{
                 }
             }
             else
-                std::cout<<"\nNo LinkedList..";
-                return 0;
+                cout<<"\nNo LinkedList..";
+            return 0;
         }
 
 };
