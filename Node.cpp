@@ -11,7 +11,7 @@ class Node{
         }
         int takeInput()
         {
-            int dta=a,length=0;
+            int dta=a,length=1;
             Node* tail=NULL;
             while (dta!=-1)
             {
@@ -38,7 +38,7 @@ class Node{
             Node *temp=head;
             if(temp!=NULL)
             {
-                for(int i=0;i<=index;i++)
+                for(int i=1;(i<=index && temp!=NULL);i++)
                 {
                     if(i==index)
                     {
@@ -48,7 +48,7 @@ class Node{
                 }
             }
             else
-                cout<<"\nNo LinkedList..";
+                std::cout<<"\nNo LinkedList..";
                 return 0;
         }
 
