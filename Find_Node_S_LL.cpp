@@ -57,8 +57,16 @@ void print(Node1 *head)
     }
     cout<<endl;
 }
-
-int Find(int data,Node1 *head)
+int findLLR(int data,Node1 *h,int i=0)
+{
+    if(h==NULL || h->a==data)
+    {
+        return h!=NULL?i:-1;
+    }
+    int temp=findLLR(data,h->next,i+1);
+    return temp;
+}
+/*int Find(int data,Node1 *head)
 {
     if(head==NULL)
     {
@@ -76,7 +84,7 @@ int Find(int data,Node1 *head)
     else{
         return index+1;
     }
-}
+}*/
 
 int main()
 {
@@ -84,6 +92,7 @@ int main()
     print(ptr);
     int data;
     cin>>data;
-    cout<<Find(data,ptr);
+    // cout<<Find(data,ptr);
+    cout<<findLLR(data,ptr);
     return 0;
 }
