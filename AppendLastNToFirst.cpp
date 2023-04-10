@@ -11,7 +11,36 @@ int length(Node1 *head)
     int len=length(head->next);
     return len+1;
 }
+/*
+n should be global
+lastNodeAddress should be global
+NewNodeAddress should be global
 
+Node* AppendLastNToFirst(Node1 *h,int* n,Node1* lastNodeAddress,Node1* NewNodeAddress,int i=1)
+{
+    if(h==NULL)
+    {
+        return NULL;
+    }
+    Node* c=AppendLastNToFirst(h->next,n,lastNodeAddress,i+1);
+    n--;
+    i--;
+    if(c==NULL)
+    {
+        lastNodeAddress=h;
+    }
+    if(n==-1)
+    {
+        head=h->next;
+        h->next=NULL;
+    }
+    if(i==0)
+    {
+        lastNodeAddress->next=h;
+    }
+    return h;
+}
+*/
 Node1* AppendLastNToFirst(int pos,Node1 *head)
 {
     while(pos!=0)
