@@ -118,7 +118,7 @@ Node1* EvenAfterOdd_LL(Node1 *head)
         evenTail->next=NULL;
         return evenHead;
     }
-    else if(evenTail==NULL)
+    else if(evenHead==NULL)
     {
         oddTail->next=NULL;
         return oddHead;
